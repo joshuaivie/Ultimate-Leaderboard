@@ -1,0 +1,251 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  background: #20368f;
+  -webkit-box-shadow: inset 0 0 6px rgb(0 0 0 / 50%);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 13px;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: Tahoma, sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  width: 100%;
+  position: relative;
+  font-weight: 400;
+  font-size: 1rem;
+  min-width: 100vw;
+  min-height: 100vh;
+  background: #f6f6f6;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: #20368f;
+  font-style: italic;
+}
+
+.page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+.content-wrap {
+  padding-bottom: 50px;
+  position: relative;
+  min-height: calc(100vh - 50px);
+}
+
+.leaderboard {
+  width: 65%;
+  display: flex;
+  margin: auto;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  border: 1px solid #e5e5e5;
+  flex-direction: column;
+}
+
+.leaderboard section.title {
+  font-family: "Press Start 2P", cursive;
+  color: #20368f;
+  width: 100%;
+  padding: 15px;
+  text-align: center;
+  font-size: 15px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.leaderboard .content {
+  width: 100%;
+  display: flex;
+}
+
+.leaderboard .left {
+  width: 50%;
+  min-width: 300px;
+}
+
+.leaderboard .right {
+  background-color: #fff;
+  padding: 30px;
+  width: 50%;
+  min-width: 300px;
+}
+
+.action-buttons {
+  display: flex;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.action-buttons button,
+.add-score-button button {
+  flex: 1;
+  padding: 15px;
+  border: none;
+  font-weight: 600;
+  color: #000b4f;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.action-buttons button:hover,
+.add-score-button button:hover {
+  opacity: 0.75;
+}
+
+.action-buttons button i,
+.add-score-button button i {
+  color: #20368f;
+  margin-right: 10px;
+}
+
+.action-buttons button.background-50,
+.add-score-button button.background-50 {
+  background-color: #20368f;
+  color: #fff;
+}
+
+.action-buttons button.background-50 i,
+.add-score-button button.background-50 i {
+  color: #829cd0;
+}
+
+.scores-container {
+  height: 430px;
+  background-color: #ebebeb;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+.highscore {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  font-size: 15px;
+  color: #4a4f64;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  border: 1px solid #fff;
+}
+
+.highscore + .highscore {
+  border-top-color: #e5e5e5;
+}
+
+.highscore:hover {
+  box-shadow: 0 0 10px 0 rgb(0 0 0 / 10%);
+  border-color: #e5e5e5;
+}
+
+.highscore .position {
+  padding: 15px;
+}
+
+.highscore .position,
+.highscore .score {
+  font-weight: 600;
+}
+
+.highscore .highscore-right {
+  display: flex;
+  justify-content: space-between;
+  flex: 1;
+  padding: 15px 15px 15px 0;
+  align-items: center;
+}
+
+.highscore .highscore-right .profile {
+  display: flex;
+  align-items: center;
+  margin-right: 15px;
+}
+
+.highscore .highscore-right .profile .avatar img {
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.add-score-form form {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.add-score-form li {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.add-score-form li label {
+  margin-bottom: 10px;
+  font-weight: 600;
+  color: #20368f;
+}
+
+.add-score-form li .game-name {
+  font-size: 15px;
+  color: #6d6d6d;
+}
+
+.add-score-form li input {
+  padding: 10px;
+  display: block;
+  width: 100%;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+}
+
+.add-score-form .notes {
+  display: block;
+  margin-top: auto;
+  color: #6d6d6d;
+  font-style: italic;
+}
+
+.add-score-form .notes .title {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.footer {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  padding: 15px;
+  font-size: 13px;
+  text-align: center;
+  color: #6d6d6d;
+}

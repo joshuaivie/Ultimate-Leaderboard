@@ -10,7 +10,75 @@
 </head>
 
 <body>
+  <div class="page-container">
+    <main class="content-wrap">
+      <div class="leaderboard">
+        <section class="title">
+          Ultimate LeaderBoard
+        </section>
+        <div class="content">
+          <section class="scores left">
+            <div class="action-buttons">
+              <button class="new-game" id="newGame"><i class="fa-solid fa-gamepad"></i> New Game</button>
+              <button class="refresh-game background-50" id="refreshGame"><i
+                  class="fa-solid fa-arrows-rotate"></i>Refresh
+                Scores</button>
+            </div>
+            <ul class="scores-container" id="scoresContainer">
+              <li class="highscore">
+                <div class="position">
+                  1.
+                </div>
+                <div class="highscore-right">
+                  <div class="profile">
+                    <div class="avatar">
+                      <img src="https://avatars.dicebear.com/api/adventurer-neutral/joshua.svg" alt="Joshua">
+                    </div>
+                    <div class="name">
+                      Joshua Ivie
+                    </div>
+                  </div>
+                  <div class="score">
+                    1275 pts
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </section>
+          <section class="add-score-form right">
+            <form id="addScore" method="post">
+              <ul>
+                <li>
+                  <label for="game-name">Game Name</label>
+                  <div name="game-namme" class="game-name">Swift Players</div>
+                </li>
+                <li>
+                  <label for="inputName">Player Name</label>
+                  <input type="text" placeholder="Enter Player Name" name="inputName" id="inputName">
+                </li>
+                <li>
+                  <label for="inputScore">Score</label>
+                  <input type="number" name="inputScore" id="inputScore">
+                </li>
+                <li class="add-score-button">
+                  <button type="submit" class="background-50"><i class="fa-solid fa-plus"></i>Add Score</button>
+                </li>
+              </ul>
+              <div class="notes"> <span class="title">Notes</span> Add a new player's score to the list by filling the
+                form. You can refresh scores to see the latest ranking. You can also create a new
+                game at the end of your
+                current game.</div>
+            </form>
+          </section>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      Made with ❤️ by <a href="http://github.com/joshuaivie" target="_blank">Joshua Ivie</a>
+    </footer>
+  </div>
 
+  <!-- <div id="notification"><div id="desc">A notification message..</div></div> -->
 </body>
 
 </html>
