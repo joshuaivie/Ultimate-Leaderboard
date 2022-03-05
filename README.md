@@ -15,7 +15,7 @@
 
 ## Live Demo
 
-[Live Demo Link]()
+[Live Demo Link](https://joshuaivie.github.io/Ultimate-Leaderboard/)
 
 ## Getting Started
 
@@ -64,7 +64,7 @@
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page]().
+Feel free to check the [issues page](https://github.com/joshuaivie/Ultimate-Leaderboard/issues).
 
 ## Show your support
 
