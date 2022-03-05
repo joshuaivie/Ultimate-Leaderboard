@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LeaderBoard</title>
+  <title>Ultimate Leaderboard</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
@@ -14,13 +14,13 @@
     <main class="content-wrap">
       <div class="leaderboard">
         <section class="title">
-          Ultimate LeaderBoard
+          <h1>Ultimate LeaderBoard</h1>
         </section>
         <div class="content">
           <section class="scores left">
             <div class="action-buttons">
-              <button class="new-game" id="newGame"><i class="fa-solid fa-gamepad"></i> New Game</button>
-              <button class="refresh-game background-50" id="refreshGame"><i
+              <button type="button" class="new-game" id="newGame"><i class="fa-solid fa-gamepad"></i> New Game</button>
+              <button type="button" class="refresh-game background-50" id="refreshGame"><i
                   class="fa-solid fa-arrows-rotate"></i>Refresh
                 Scores</button>
             </div>
@@ -50,15 +50,15 @@
               <ul>
                 <li>
                   <label for="game-name">Game Name</label>
-                  <div name="game-namme" class="game-name">Swift Players</div>
+                  <input disabled id="game-name" value="Swift Players">
                 </li>
                 <li>
                   <label for="inputName">Player Name</label>
-                  <input type="text" placeholder="Enter Player Name" name="inputName" id="inputName">
+                  <input type="text" placeholder="Enter Player Name" name="inputName" id="inputName" required>
                 </li>
                 <li>
                   <label for="inputScore">Score</label>
-                  <input type="number" name="inputScore" id="inputScore">
+                  <input type="number" name="inputScore" id="inputScore" required min="1" placeholder="Player Score">
                 </li>
                 <li class="add-score-button">
                   <button type="submit" class="background-50"><i class="fa-solid fa-plus"></i>Add Score</button>
@@ -74,7 +74,7 @@
       </div>
     </main>
     <footer class="footer">
-      Made with ❤️ by <a href="http://github.com/joshuaivie" target="_blank">Joshua Ivie</a>
+      Made with ❤️ by <a href="http://github.com/joshuaivie" target="_blank" rel="noopener noreferrer">Joshua Ivie</a>
     </footer>
   </div>
 

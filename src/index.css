@@ -68,13 +68,16 @@ a {
 }
 
 .leaderboard section.title {
-  font-family: "Press Start 2P", cursive;
-  color: #20368f;
   width: 100%;
   padding: 15px;
   text-align: center;
-  font-size: 15px;
   border-bottom: 1px solid #e5e5e5;
+}
+
+.leaderboard section.title h1 {
+  font-family: "Press Start 2P", cursive;
+  color: #20368f;
+  font-size: 15px;
 }
 
 .leaderboard .content {
@@ -220,6 +223,10 @@ a {
   background-color: #fff;
   background-clip: padding-box;
   border: 1px solid #ced4da;
+}
+
+.add-score-form li input:disabled {
+  background: #f6f6f6;
 }
 
 .add-score-form .notes {
