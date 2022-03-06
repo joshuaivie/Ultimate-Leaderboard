@@ -9,7 +9,7 @@ const SubmitScoreButton = document.getElementById('submitScoreButton');
 const NewGameOverlay = document.getElementById('newGameOverlay');
 const NewGameForm = document.getElementById('newGameForm');
 const NewGameNameInput = document.getElementById('newGameNameInput');
-const StartNameGameButton = document.getElementById('startNewGameButton')
+const StartNameGameButton = document.getElementById('startNewGameButton');
 
 export {
   NewGameButton,
@@ -23,5 +23,5 @@ export {
   NewGameOverlay,
   NewGameForm,
   NewGameNameInput,
-  StartNameGameButton
-}
+  StartNameGameButton,
+};

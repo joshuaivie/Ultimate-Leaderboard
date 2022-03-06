@@ -1,4 +1,5 @@
 import './index.css';
 import InitiateGame from './modules/gameController';
 
-new InitiateGame()
+const Leaderboard = new InitiateGame();
+Leaderboard();

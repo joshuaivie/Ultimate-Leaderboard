@@ -1,19 +1,18 @@
 import { GameName, NewGameOverlay } from './elements';
 
 const ShowNewGameOverlay = () => {
-  NewGameOverlay.style.display = 'flex'
-}
+  NewGameOverlay.style.display = 'flex';
+};
 
 const HideNewGameOverlay = () => {
-  NewGameOverlay.style.display = 'none'
-}
+  NewGameOverlay.style.display = 'none';
+};
 
 const SetGameName = (gameName) => {
-  GameName.value = gameName
-}
+  GameName.value = gameName;
+};
 
-const GetScoreListHTML = (score, index) => {
-  return `
+const GetScoreListHTML = (score, index) => `
   <li class="highscore">
     <div class="position">
      ${index + 1}.
@@ -31,7 +30,8 @@ const GetScoreListHTML = (score, index) => {
         ${score.score} pts
       </div>
     </div>
-  </li>`
-}
+  </li>`;
 
-export { ShowNewGameOverlay, HideNewGameOverlay, SetGameName, GetScoreListHTML }
+export {
+  ShowNewGameOverlay, HideNewGameOverlay, SetGameName, GetScoreListHTML,
+};
