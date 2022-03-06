@@ -40,11 +40,14 @@ export default class GameController {
 
   async RenderGameScores(game = this.game) {
     const scoreListArray = await game.getScoreList();
-    let scoresListHTML = '';
+    ScoreContainer.innerHTML = '';
     scoreListArray.sort((a, b) => b.score - a.score).forEach((score, index) => {
-      scoresListHTML += GetScoreListHTML(score, index);
+      const listElement = document.createElement('li');
+      listElement.classList.add('highscore');
+      listElement.innerHTML = GetScoreListHTML(score, index);
+      ScoreContainer.appendChild(listElement);
+      setTimeout(() => listElement.classList.add('show'), (index + 1) * 150);
     });
-    ScoreContainer.innerHTML = scoresListHTML;
   }
 
   static async CollectGameName() {

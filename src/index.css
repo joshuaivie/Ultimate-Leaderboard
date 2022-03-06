@@ -157,6 +157,14 @@ a {
   transition: all 0.3s ease-in-out;
   cursor: pointer;
   border: 1px solid #fff;
+  position: relative;
+  left: calc(100% + 8px);
+  opacity: 0;
+}
+
+.highscore.show {
+  left: 0;
+  opacity: 1;
 }
 
 .highscore + .highscore {

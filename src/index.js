@@ -1,5 +1,5 @@
 import './index.css';
-import InitiateGame from './modules/gameController';
+import GameController from './modules/gameController';
 
-const Leaderboard = new InitiateGame();
-Leaderboard();
+const Leaderboard = new GameController();
+Leaderboard.InitiateGame();
