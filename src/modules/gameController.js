@@ -34,7 +34,7 @@ export default class GameController {
   async RenderGameScores(game = this.game) {
     let scoreListArray = await game.getScoreList()
     let scoresListHTML = ``
-    scoreListArray.forEach((score, index) => {
+    scoreListArray.sort((a, b) => b.score - a.score).forEach((score, index) => {
       scoresListHTML += GetScoreListHTML(score, index)
     })
     ScoreContainer.innerHTML = scoresListHTML;
