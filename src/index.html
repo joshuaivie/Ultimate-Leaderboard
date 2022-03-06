@@ -19,49 +19,35 @@
         <div class="content">
           <section class="scores left">
             <div class="action-buttons">
-              <button type="button" class="new-game" id="newGame"><i class="fa-solid fa-gamepad"></i> New Game</button>
-              <button type="button" class="refresh-game background-50" id="refreshGame"><i
+              <button type="button" class="new-game" id="newGameButton"><i class="fa-solid fa-gamepad"></i> New
+                Game</button>
+              <button type="button" class="refresh-game background-50" id="refreshScoreButton"><i
                   class="fa-solid fa-arrows-rotate"></i>Refresh
                 Scores</button>
             </div>
             <ul class="scores-container" id="scoresContainer">
-              <li class="highscore">
-                <div class="position">
-                  1.
-                </div>
-                <div class="highscore-right">
-                  <div class="profile">
-                    <div class="avatar">
-                      <img src="https://avatars.dicebear.com/api/adventurer-neutral/joshua.svg" alt="Joshua">
-                    </div>
-                    <div class="name">
-                      Joshua Ivie
-                    </div>
-                  </div>
-                  <div class="score">
-                    1275 pts
-                  </div>
-                </div>
-              </li>
             </ul>
           </section>
           <section class="add-score-form right">
-            <form id="addScore" method="post">
+            <form id="addScoreForm" method="post">
               <ul>
                 <li>
-                  <label for="game-name">Game Name</label>
-                  <input disabled id="game-name" value="Swift Players">
+                  <label for="gameName">Game Name</label>
+                  <input disabled id="gameName" name="game-name" value="">
                 </li>
                 <li>
-                  <label for="inputName">Player Name</label>
-                  <input type="text" placeholder="Enter Player Name" name="inputName" id="inputName" required>
+                  <label for="playerNameInput">Player Name</label>
+                  <input type="text" placeholder="Enter Player Name" name="player-name-input" id="playerNameInput"
+                    required>
                 </li>
                 <li>
-                  <label for="inputScore">Score</label>
-                  <input type="number" name="inputScore" id="inputScore" required min="1" placeholder="Player Score">
+                  <label for="playerScoreInput">Score</label>
+                  <input type="number" id="playerScoreInput" name="player-score-input" required min="1"
+                    placeholder="Player Score">
                 </li>
                 <li class="add-score-button">
-                  <button type="submit" class="background-50"><i class="fa-solid fa-plus"></i>Add Score</button>
+                  <button type="submit" class="background-50" id="submitScoreButton"><i class="fa-solid fa-plus"></i>Add
+                    Score</button>
                 </li>
               </ul>
               <div class="notes"> <span class="title">Notes</span> Add a new player's score to the list by filling the
@@ -77,8 +63,22 @@
       Made with ❤️ by <a href="http://github.com/joshuaivie" target="_blank" rel="noopener noreferrer">Joshua Ivie</a>
     </footer>
   </div>
-
-  <!-- <div id="notification"><div id="desc">A notification message..</div></div> -->
+  <div class="page-overlay" id="newGameOverlay">
+    <form id="newGameForm" method="post" class="new-game-form">
+      <h2>Start New Game</h2>
+      <p class="notes">Welcome to Ultimate Leaderboard! Please enter a game name to start keeping track of your game.
+      </p>
+      <ul>
+        <li>
+          <input id="newGameNameInput" name="game-name" value="" placeholder="Enter Game Name">
+        </li>
+        <li class="start-game-button">
+          <button type="submit" class="background-50" id="startNewGameButton"><i class="fa-solid fa-plus"></i>Start
+            Game</button>
+        </li>
+      </ul>
+    </form>
+  </div>
 </body>
 
 </html>

@@ -74,10 +74,12 @@ a {
   border-bottom: 1px solid #e5e5e5;
 }
 
-.leaderboard section.title h1 {
+.leaderboard section.title h1,
+.new-game-form h2 {
   font-family: "Press Start 2P", cursive;
   color: #20368f;
   font-size: 15px;
+  margin-bottom: 10px;
 }
 
 .leaderboard .content {
@@ -102,7 +104,8 @@ a {
 }
 
 .action-buttons button,
-.add-score-button button {
+.add-score-button button,
+.start-game-button button {
   flex: 1;
   padding: 15px;
   border: none;
@@ -113,24 +116,28 @@ a {
 }
 
 .action-buttons button:hover,
-.add-score-button button:hover {
+.add-score-button button:hover,
+.start-game-button button:hover {
   opacity: 0.75;
 }
 
 .action-buttons button i,
-.add-score-button button i {
+.add-score-button button i,
+.start-game-button button i {
   color: #20368f;
   margin-right: 10px;
 }
 
 .action-buttons button.background-50,
-.add-score-button button.background-50 {
+.add-score-button button.background-50,
+.start-game-button button.background-50 {
   background-color: #20368f;
   color: #fff;
 }
 
 .action-buttons button.background-50 i,
-.add-score-button button.background-50 i {
+.add-score-button button.background-50 i,
+.start-game-button button.background-50 i {
   color: #829cd0;
 }
 
@@ -196,24 +203,26 @@ a {
   height: 100%;
 }
 
-.add-score-form li {
+.add-score-form li,
+.new-game-form li {
   display: flex;
   flex-direction: column;
   margin-bottom: 20px;
 }
 
-.add-score-form li label {
+.new-game-form li:last-of-type {
+  margin-bottom: 0;
+}
+
+.add-score-form li label,
+.new-game-form li label {
   margin-bottom: 10px;
   font-weight: 600;
   color: #20368f;
 }
 
-.add-score-form li .game-name {
-  font-size: 15px;
-  color: #6d6d6d;
-}
-
-.add-score-form li input {
+.add-score-form li input,
+.new-game-form li input {
   padding: 10px;
   display: block;
   width: 100%;
@@ -225,15 +234,24 @@ a {
   border: 1px solid #ced4da;
 }
 
+.new-game-form li input {
+  min-width: 250px;
+}
+
 .add-score-form li input:disabled {
   background: #f6f6f6;
 }
 
-.add-score-form .notes {
+.add-score-form .notes,
+.new-game-form .notes {
   display: block;
   margin-top: auto;
   color: #6d6d6d;
   font-style: italic;
+}
+
+.new-game-form .notes {
+  margin-bottom: 20px;
 }
 
 .add-score-form .notes .title {
@@ -250,6 +268,25 @@ a {
   font-size: 13px;
   text-align: center;
   color: #6d6d6d;
+}
+
+.page-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.page-overlay .new-game-form {
+  background: #fff;
+  padding: 30px;
+  max-width: 350px;
 }
 
 @media (min-width: 768px) {
