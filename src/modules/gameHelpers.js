@@ -13,7 +13,6 @@ const SetGameName = (gameName) => {
 };
 
 const GetScoreListHTML = (score, index) => `
-  <li class="highscore">
     <div class="position">
      ${index + 1}.
     </div>
@@ -29,8 +28,7 @@ const GetScoreListHTML = (score, index) => `
       <div class="score">
         ${score.score} pts
       </div>
-    </div>
-  </li>`;
+    </div>`;
 
 export {
   ShowNewGameOverlay, HideNewGameOverlay, SetGameName, GetScoreListHTML,
