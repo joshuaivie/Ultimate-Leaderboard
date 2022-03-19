@@ -2,9 +2,9 @@
 
 # Leaderboard
 
-![screenshot](./src/images/ultimate-leaderboard.png)
+![screenshot](./src/images/ultimate-leaderboard.gif)
 
-> The Ultimate Leaderboard app, stores and retrieves game high scores through an open leaderboard API. It uses webpack and ES6 features, notably modules.
+> The Ultimate Leaderboard app stores and retrieves game high scores through an open leaderboard API. It uses webpack and ES6 features, including modules..
 
 ## Built With
 
